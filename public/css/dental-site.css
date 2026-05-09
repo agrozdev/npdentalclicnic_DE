@@ -1,0 +1,299 @@
+/* NP Dental Clinic — site-specific overrides */
+
+/* Disable the heavy custom mouse cursor on touch devices to keep mobile snappy */
+@media (hover: none) {
+    .cursor, .cursor-follower { display: none !important; }
+    body { cursor: auto !important; }
+}
+
+/* Floating WhatsApp button */
+.whatsapp-fab {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+    z-index: 1080;
+    transition: transform .2s ease, box-shadow .2s ease;
+    text-decoration: none;
+}
+.whatsapp-fab:hover,
+.whatsapp-fab:focus {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 12px 28px rgba(37, 211, 102, 0.55);
+    color: #fff;
+}
+.whatsapp-fab i { font-size: 30px; line-height: 1; }
+.whatsapp-fab .whatsapp-fab-label {
+    position: absolute;
+    right: 70px;
+    background: #1f2937;
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(8px);
+    transition: opacity .2s ease, transform .2s ease;
+    pointer-events: none;
+}
+.whatsapp-fab:hover .whatsapp-fab-label,
+.whatsapp-fab:focus .whatsapp-fab-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+@media (max-width: 575.98px) {
+    .whatsapp-fab { right: 16px; bottom: 16px; width: 54px; height: 54px; }
+    .whatsapp-fab i { font-size: 26px; }
+    .whatsapp-fab .whatsapp-fab-label { display: none; }
+}
+
+/* Cookie banner */
+.cookie-banner {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: 720px;
+    margin: 0 auto;
+    background: #ffffff;
+    color: #1f2937;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+    padding: 18px 20px;
+    z-index: 1070;
+    display: none;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.cookie-banner.is-visible { display: flex; }
+.cookie-banner p { margin: 0; flex: 1 1 280px; font-size: 14px; line-height: 1.5; }
+.cookie-banner .cookie-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.cookie-banner .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.cookie-banner .btn-primary { background: #0f766e; color: #fff; border-color: #0f766e; }
+.cookie-banner .btn-primary:hover { background: #115e59; border-color: #115e59; color: #fff; }
+.cookie-banner .btn-ghost { background: transparent; color: #1f2937; border-color: #d1d5db; }
+.cookie-banner .btn-ghost:hover { background: #f3f4f6; }
+.cookie-banner a.cookie-link { color: #0f766e; text-decoration: underline; font-weight: 600; }
+@media (max-width: 575.98px) {
+    .cookie-banner { padding: 14px 16px; bottom: 84px; }
+}
+
+/* Legal pages */
+.legal-content { padding: 80px 0; }
+.legal-content h2 { margin-top: 32px; margin-bottom: 12px; font-size: 24px; }
+.legal-content h3 { margin-top: 24px; margin-bottom: 8px; font-size: 18px; }
+.legal-content p,
+.legal-content li { line-height: 1.7; }
+.legal-content ul { padding-left: 22px; }
+.legal-content .legal-meta { color: #6b7280; font-size: 14px; margin-bottom: 32px; }
+
+/* Quality / certificates list */
+.quality-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.quality-list li {
+    position: relative;
+    padding: 10px 0 10px 36px;
+    border-bottom: 1px solid #eef2f7;
+    font-size: 16px;
+}
+.quality-list li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 12px;
+    color: #0f766e;
+    font-size: 16px;
+}
+
+/* Process steps */
+.process-grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.process-step {
+    background: #ffffff;
+    border: 1px solid #eef2f7;
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.process-step:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(15,118,110,0.12); }
+.process-step .process-number {
+    display: inline-block;
+    color: #0f766e;
+    font-weight: 800;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+.process-step h3 { font-size: 20px; margin-bottom: 8px; }
+.process-step p { font-size: 15px; color: #4b5563; margin: 0; }
+
+/* Service teaser cards on home page */
+.featured-services { padding: 60px 0 90px; }
+.featured-service-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #eef2f7;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.featured-service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(15,118,110,0.14);
+}
+.featured-service-card .service-cover {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+}
+.featured-service-card .service-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+.featured-service-card:hover .service-cover img { transform: scale(1.05); }
+.featured-service-card .service-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+.featured-service-card h3 { font-size: 24px; margin-bottom: 12px; }
+.featured-service-card p { color: #4b5563; flex: 1; }
+.featured-service-card .btn-default { margin-top: 16px; align-self: flex-start; }
+
+/* WhatsApp button inline (used on contact page) */
+.btn-whatsapp {
+    background: #25D366 !important;
+    border-color: #25D366 !important;
+    color: #fff !important;
+}
+.btn-whatsapp:hover { background: #1ebe5d !important; border-color: #1ebe5d !important; }
+
+/* Final CTA full-width section */
+.final-cta-section {
+    background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+}
+.final-cta-section h2 { color: #fff; font-size: 36px; margin-bottom: 16px; }
+.final-cta-section p { color: rgba(255,255,255,0.85); font-size: 18px; margin-bottom: 28px; max-width: 720px; margin-left: auto; margin-right: auto; }
+.final-cta-section .btn-default {
+    background: #fff;
+    color: #0f766e;
+    border-color: #fff;
+    margin: 6px;
+}
+.final-cta-section .btn-default:hover { background: #f3f4f6; color: #0f766e; }
+.final-cta-section .btn-default.btn-whatsapp { background: #25D366 !important; color: #fff !important; }
+
+/* Blog cards */
+.post-card {
+    height: 100%;
+    background: #fff;
+    border: 1px solid #eef2f7;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.post-card:hover { transform: translateY(-3px); box-shadow: 0 18px 32px rgba(15,23,42,0.10); }
+.post-card .post-cover { aspect-ratio: 16/10; overflow: hidden; }
+.post-card .post-cover img { width: 100%; height: 100%; object-fit: cover; }
+.post-card .post-body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+.post-card .post-meta { color: #6b7280; font-size: 13px; margin-bottom: 8px; }
+.post-card h3 { font-size: 20px; margin-bottom: 8px; }
+.post-card h3 a { color: inherit; }
+.post-card p { color: #4b5563; flex: 1; }
+.post-card .post-link { margin-top: 12px; font-weight: 600; color: #0f766e; }
+
+/* Single blog post */
+.post-single { padding: 70px 0; }
+.post-single .post-cover { border-radius: 18px; overflow: hidden; margin-bottom: 32px; max-height: 480px; }
+.post-single .post-cover img { width: 100%; height: 100%; object-fit: cover; }
+.post-single .post-meta { color: #6b7280; margin-bottom: 12px; font-size: 14px; }
+.post-single h1 { font-size: 36px; margin-bottom: 20px; line-height: 1.2; }
+.post-single .post-body p { line-height: 1.8; margin-bottom: 16px; }
+.post-single .post-body h2 { margin-top: 36px; margin-bottom: 14px; font-size: 26px; }
+.post-single .post-body h3 { margin-top: 24px; margin-bottom: 10px; font-size: 20px; }
+.post-single .post-body ul { padding-left: 22px; margin-bottom: 18px; }
+.post-single .post-body li { line-height: 1.7; margin-bottom: 6px; }
+.post-single blockquote {
+    margin: 24px 0;
+    padding: 20px 24px;
+    background: #f0fdfa;
+    border-left: 4px solid #0f766e;
+    border-radius: 8px;
+    color: #115e59;
+}
+
+/* Form */
+.contact-form .form-control,
+.contact-form .form-select {
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    padding: 14px 16px;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 14px;
+}
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    outline: none;
+    border-color: #0f766e;
+    box-shadow: 0 0 0 3px rgba(15,118,110,0.15);
+}
+.contact-form .form-error { color: #b91c1c; font-size: 13px; margin-top: -8px; margin-bottom: 12px; }
+.contact-form .form-success {
+    background: #ecfdf5;
+    color: #065f46;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+.contact-form .form-error-banner {
+    background: #fef2f2;
+    color: #991b1b;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+.contact-form .form-check { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 16px; font-size: 14px; }
+.contact-form textarea.form-control { min-height: 160px; resize: vertical; }
+
+/* Visually hidden honeypot */
+.hp-field { position: absolute !important; left: -10000px !important; width: 1px; height: 1px; overflow: hidden; }
+
+/* About-us experience badge with custom background image */
+.company-experience.has-bg-image {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Generic section helpers */
+.section-eyebrow { color: #0f766e; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 14px; }
+.lead-text { font-size: 17px; line-height: 1.7; color: #4b5563; }
+.section-spacer { padding: 80px 0; }

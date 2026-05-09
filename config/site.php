@@ -1,0 +1,32 @@
+<?php
+
+return [
+    'brand' => 'NP Dental Clinic',
+    'tagline' => 'Premium dental implants & aligners in Sofia for UK patients',
+
+    'contact' => [
+        'phone_display' => '+359 89 865 2858',
+        'phone_e164' => '+359898652858',
+        'whatsapp_e164' => '359898652858',
+        'email' => 'info@npdentalclinic.com',
+        'hours' => 'Mon–Sun 8:00–20:00',
+        'address_lines' => [
+            'ul. Akademik Yordan Trifonov 5',
+            '1700 Sofia, Bulgaria',
+        ],
+        'address_inline' => 'ul. Akademik Yordan Trifonov 5, 1700 Sofia, Bulgaria',
+        'map_query' => 'NP Dental Clinic, ul. Akademik Yordan Trifonov 5, Sofia, Bulgaria',
+    ],
+
+    'social' => [
+        'facebook' => '#',
+        'instagram' => '#',
+        'linkedin' => '#',
+    ],
+
+    'locales' => [
+        'en' => 'English',
+    ],
+
+    'fallback_locale' => 'en',
+];
