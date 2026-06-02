@@ -6,6 +6,16 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ0EC34JEL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BJ0EC34JEL');
+</script>
 <meta name="description" content="{{ $descText }}">
 <meta name="keywords" content="dental implants UK, clear aligners UK, dental tourism Bulgaria, Bulgaria dentist, NP Dental Clinic">
 <meta name="author" content="{{ $brand }}">
