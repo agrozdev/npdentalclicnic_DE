@@ -9,6 +9,7 @@
 <meta name="description" content="{{ $descText }}">
 <meta name="keywords" content="dental implants UK, clear aligners UK, dental tourism Bulgaria, Bulgaria dentist, NP Dental Clinic">
 <meta name="author" content="{{ $brand }}">
+<meta name="google-site-verification" content="Ap0vBBSLVTZ57Qs-NZUpsyRWEXRzNhpC2FA4h7QP0xw" />
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ $titleText }}">
