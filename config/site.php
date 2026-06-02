@@ -2,12 +2,14 @@
 
 return [
     'brand' => 'NP Dental Clinic',
-    'tagline' => 'Premium dental implants & aligners in Sofia for UK patients',
+    'tagline' => 'Premium dental implants & aligners in Bulgaria for UK patients',
 
     'contact' => [
         'phone_display' => '+359 89 865 2858',
         'phone_e164' => '+359898652858',
-        'whatsapp_e164' => '359898652858',
+        'whatsapp_e164' => '359887570020',
+        'whatsapp_display' => '+359 88 757 0020',
+        'whatsapp_phone_e164' => '+359887570020',
         'email' => 'info@npdentalclinic.com',
         'hours' => 'Mon–Sun 8:00–20:00',
         'address_lines' => [

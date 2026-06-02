@@ -6,7 +6,7 @@ return [
 
     'breadcrumb' => 'Blog',
     'hero_title' => 'From our clinic',
-    'hero_subtitle' => 'Honest, clinician-written articles on dental implants, clear aligners and what to expect when travelling to Sofia for dental work.',
+    'hero_subtitle' => 'Honest, clinician-written articles on dental implants, clear aligners and what to expect when travelling to Bulgaria for dental work.',
 
     'posted_on' => 'Posted on',
     'by' => 'By',

@@ -1,10 +1,10 @@
-<p class="lead-text"><strong>Dental implants in Bulgaria can save UK patients between 60% and 75% on private UK prices — without compromising on the implant brand, the surgeon’s qualifications or the clinical protocols.</strong> This guide explains exactly how it works, what to look for, what to budget for, and what a treatment trip from the UK to Sofia actually looks like in 2026.</p>
+<p class="lead-text"><strong>Dental implants in Bulgaria can save UK patients between 60% and 75% on private UK prices — without compromising on the implant brand, the surgeon’s qualifications or the clinical protocols.</strong> This guide explains exactly how it works, what to look for, what to budget for, and what a treatment trip from the UK to Bulgaria actually looks like in 2026.</p>
 
 <p>Whether you are missing a single tooth, considering a bridge alternative, or facing a full-arch reconstruction with All-on-4 or All-on-6, you will find a clear, clinician-written breakdown below — including costs, materials, warranties and the questions you should ask any clinic before you book a flight.</p>
 
 <h2>What are dental implants, and why do UK patients travel for them?</h2>
 <p>A dental implant is a small titanium screw that is placed into the jawbone where a missing tooth used to be. After healing, a custom crown, bridge or full-arch prosthesis is fitted on top — restoring both function and aesthetics. Done well, an implant looks, feels and works like a natural tooth, and can last a lifetime.</p>
-<p>The clinical method is the same in London, Sofia and Berlin. What changes between countries is the cost of running a clinic — premises, salaries, taxes — not the cost of the implant itself. That is why a Straumann or Nobel Biocare implant placed in Sofia delivers identical clinical quality to the same implant placed in the UK, but at a fraction of the price.</p>
+<p>The clinical method is the same in London, Bulgaria and Berlin. What changes between countries is the cost of running a clinic — premises, salaries, taxes — not the cost of the implant itself. That is why a Straumann or Nobel Biocare implant placed in Bulgaria delivers identical clinical quality to the same implant placed in the UK, but at a fraction of the price.</p>
 
 <h2>How much do dental implants cost in Bulgaria vs the UK?</h2>
 <p>The numbers below are typical 2026 ranges. Always confirm with a written quote from your specific clinic before making decisions.</p>
@@ -34,7 +34,7 @@
     <li><strong>Bulgaria:</strong> £6,000 – £9,500 per arch</li>
 </ul>
 
-<blockquote>For a typical UK patient flying in for a single implant and crown, return flights to Sofia and a 3-night hotel stay rarely exceed £400–£600 total — leaving a clear net saving of £1,000+ per tooth compared to UK private prices.</blockquote>
+<blockquote>For a typical UK patient flying in for a single implant and crown, return flights to Bulgaria and a 3-night hotel stay rarely exceed £400–£600 total — leaving a clear net saving of £1,000+ per tooth compared to UK private prices.</blockquote>
 
 <h2>Which implant brands matter, and why?</h2>
 <p>The single biggest decision in implantology is not the country or even the surgeon — it is the implant system itself. Premium implants are backed by decades of independent clinical research, predictable long-term outcomes and lifetime manufacturer warranties.</p>
@@ -47,7 +47,7 @@
 <p>At <a href="{{ route('services.implants') }}">NP Dental Clinic</a>, we use Straumann and Nobel Biocare exclusively, and you receive the implant passport — with manufacturer, lot number and warranty information — before you fly home.</p>
 
 <h2>Are dental implants in Bulgaria safe?</h2>
-<p>Yes, when you choose the right clinic. Bulgaria is an EU member state, which means dental clinics operate under the same medical-device, sterilisation and patient-rights regulations that apply across the EU. The CE-marked implants used in Sofia are the same CE-marked implants used in London.</p>
+<p>Yes, when you choose the right clinic. Bulgaria is an EU member state, which means dental clinics operate under the same medical-device, sterilisation and patient-rights regulations that apply across the EU. The CE-marked implants used in Bulgaria are the same CE-marked implants used in London.</p>
 <p>What varies between clinics — anywhere in the world — is execution. The factors that genuinely affect safety and outcome are:</p>
 <ul>
     <li>The surgeon’s specialist qualification and case volume</li>
@@ -59,22 +59,22 @@
 <p>If a clinic answers all of those clearly, you are in safe hands. If they dodge any of them, walk away — no matter the price.</p>
 
 <h2>What does a typical implant trip from the UK look like?</h2>
-<p>For most cases, treatment fits into two short visits to Sofia. Here is the timeline most UK patients experience:</p>
+<p>For most cases, treatment fits into two short visits to Bulgaria. Here is the timeline most UK patients experience:</p>
 
 <h3>Step 1 — Free online consultation (before you travel)</h3>
 <p>You send recent X-rays or photos by email or WhatsApp. The clinic responds with a written treatment plan, transparent quote and travel guidance — usually within 48 hours. No payment is taken at this stage.</p>
 
-<h3>Step 2 — First visit to Sofia (2–4 days)</h3>
+<h3>Step 2 — First visit to Bulgaria (2–4 days)</h3>
 <p>You arrive, are seen at the clinic for an in-person examination and CBCT 3D scan, then have your implant placed under local anaesthesia. Most patients return to their hotel within an hour and feel well enough to fly home the next day.</p>
 
 <h3>Step 3 — Healing at home (3–6 months)</h3>
 <p>The implant integrates with your jawbone — a process called osseointegration. You stay in touch with the clinic by WhatsApp and email throughout. There is no pain or restriction in everyday life during this period.</p>
 
 <h3>Step 4 — Final fitting (2–3 days)</h3>
-<p>You return to Sofia for the final crown, bridge or full-arch prosthesis to be fitted. You leave with a finished smile and full clinical records in English.</p>
+<p>You return to Bulgaria for the final crown, bridge or full-arch prosthesis to be fitted. You leave with a finished smile and full clinical records in English.</p>
 
 <h2>How to choose a Bulgarian implant clinic — a UK-patient checklist</h2>
-<p>Before you commit to any clinic — in Sofia, Plovdiv or anywhere else — make sure the answer to all of these is yes:</p>
+<p>Before you commit to any clinic — in Bulgaria, Plovdiv or anywhere else — make sure the answer to all of these is yes:</p>
 <ul>
     <li>Does the clinic give you a written treatment plan and quote in English <em>before</em> you fly?</li>
     <li>Will they tell you the exact implant brand and lot number, and provide the implant passport on departure?</li>
@@ -86,7 +86,7 @@
 </ul>
 
 <h2>What about aftercare back in the UK?</h2>
-<p>Aftercare is genuinely simple. After the implant has integrated and the final crown is fitted, the implant is cared for exactly like a natural tooth — daily brushing and flossing, plus your usual hygiene appointments at your UK dentist. Should anything ever come up, the manufacturer warranty travels with you and most issues can be resolved with a single short visit back to Sofia. NP Dental Clinic stays in touch with all UK patients long after treatment ends.</p>
+<p>Aftercare is genuinely simple. After the implant has integrated and the final crown is fitted, the implant is cared for exactly like a natural tooth — daily brushing and flossing, plus your usual hygiene appointments at your UK dentist. Should anything ever come up, the manufacturer warranty travels with you and most issues can be resolved with a single short visit back to Bulgaria. NP Dental Clinic stays in touch with all UK patients long after treatment ends.</p>
 
 <h2>Frequently asked questions</h2>
 
@@ -107,7 +107,7 @@
 
 <h2>Ready to compare your options?</h2>
 <p>If you are weighing up dental implant treatment, the most useful next step is a written, no-obligation treatment plan based on your actual X-rays. We respond to most enquiries within 48 hours, in plain English, with transparent costs.</p>
-<p><a href="{{ route('contact') }}" class="btn-default">Book a free consultation</a> &nbsp; or read more about our <a href="{{ route('services.implants') }}">dental implants in Sofia</a>.</p>
+<p><a href="{{ route('contact') }}" class="btn-default">Book a free consultation</a> &nbsp; or read more about our <a href="{{ route('services.implants') }}">dental implants in Bulgaria</a>.</p>
 
 @push('scripts')
 @verbatim
@@ -129,7 +129,7 @@
             "name": "Are dental implants in Bulgaria safe?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Bulgaria is an EU member state, so clinics operate under the same medical-device, sterilisation and patient-rights regulations as UK and EU clinics. The Straumann and Nobel Biocare implants used in Sofia are identical to those used in London."
+                "text": "Yes. Bulgaria is an EU member state, so clinics operate under the same medical-device, sterilisation and patient-rights regulations as UK and EU clinics. The Straumann and Nobel Biocare implants used in Bulgaria are identical to those used in London."
             }
         },
         {

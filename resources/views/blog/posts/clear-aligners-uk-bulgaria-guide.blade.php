@@ -1,4 +1,4 @@
-<p class="lead-text"><strong>Clear dental aligners can correct most cosmetic and mild-to-moderate orthodontic issues, almost invisibly, in 6–14 months — and treatment in Sofia typically costs around half of UK private prices.</strong> This guide explains how aligners work, who they suit, what to expect from a treatment trip to Bulgaria, and how to decide whether aligners or fixed braces are the right tool for your case.</p>
+<p class="lead-text"><strong>Clear dental aligners can correct most cosmetic and mild-to-moderate orthodontic issues, almost invisibly, in 6–14 months — and treatment in Bulgaria typically costs around half of UK private prices.</strong> This guide explains how aligners work, who they suit, what to expect from a treatment trip to Bulgaria, and how to decide whether aligners or fixed braces are the right tool for your case.</p>
 
 <h2>What are clear aligners?</h2>
 <p>Clear aligners are transparent, custom-made plastic trays that fit precisely over your teeth. Each tray gently moves your teeth a fraction of a millimetre, and you change to the next tray every 1–2 weeks. Over a series of trays, your teeth move into the planned final position.</p>
@@ -41,7 +41,7 @@
     <li><strong>Bulgaria:</strong> £2,200 – £3,500</li>
 </ul>
 
-<p>Most cases are completed in 1–2 short visits to Sofia (the rest of the treatment is monitored remotely), so flight and accommodation costs are low — typically £200–£400 in total.</p>
+<p>Most cases are completed in 1–2 short visits to Bulgaria (the rest of the treatment is monitored remotely), so flight and accommodation costs are low — typically £200–£400 in total.</p>
 
 <blockquote>The single most important predictor of a great aligner outcome is not the brand — it is the experience of the clinician who designs the digital treatment plan. Choose the planner, not the trademark.</blockquote>
 
@@ -50,14 +50,14 @@
 <h3>Step 1 — Free online consultation</h3>
 <p>You send a few photos of your smile and describe what you want to change. The clinic tells you honestly whether aligners can deliver the result you want, and gives you an estimated price range. No payment at this stage.</p>
 
-<h3>Step 2 — First visit to Sofia (1–2 days)</h3>
+<h3>Step 2 — First visit to Bulgaria (1–2 days)</h3>
 <p>An intra-oral 3D scan is taken — no messy putty impressions. From the scan, a specialist designs your full digital treatment plan and you can preview your final smile before any aligner is made.</p>
 
 <h3>Step 3 — Aligners delivered</h3>
 <p>Your full set of aligners is manufactured and posted to you in the UK. You change to a new tray every 1–2 weeks and wear each one for 20–22 hours a day.</p>
 
 <h3>Step 4 — Remote monitoring</h3>
-<p>You send progress photos every few weeks and we keep you on track by WhatsApp and email. Most patients only need to come back to Sofia once or twice during the active phase.</p>
+<p>You send progress photos every few weeks and we keep you on track by WhatsApp and email. Most patients only need to come back to Bulgaria once or twice during the active phase.</p>
 
 <h3>Step 5 — Refinements and retainers</h3>
 <p>At the end of treatment, a small set of refinement aligners may be issued to perfect the result. You then move to retainers (worn at night) to keep your new smile in place permanently.</p>
@@ -108,7 +108,7 @@
 
 <h2>Find out if aligners are right for you</h2>
 <p>If you would like an honest opinion on whether clear aligners can deliver the result you have in mind — including whether your case is better treated with fixed braces — send a few photos of your smile and we will reply with a clear answer.</p>
-<p><a href="{{ route('contact') }}" class="btn-default">Book a free consultation</a> &nbsp; or read more about our <a href="{{ route('services.aligners') }}">clear aligners in Sofia</a>.</p>
+<p><a href="{{ route('contact') }}" class="btn-default">Book a free consultation</a> &nbsp; or read more about our <a href="{{ route('services.aligners') }}">clear aligners in Bulgaria</a>.</p>
 
 @push('scripts')
 @verbatim

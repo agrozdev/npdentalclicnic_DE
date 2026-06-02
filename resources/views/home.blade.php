@@ -207,8 +207,41 @@
         </div>
     </section>
 
-    {{-- Process --}}
+    {{-- Doctors / Team --}}
     <section class="section-spacer">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-9">
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">{{ __('home.team.eyebrow') }}</h3>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">{{ __('home.team.title') }}</h2>
+                        <p class="wow fadeInUp lead-text" data-wow-delay="0.25s">{{ __('home.team.subtitle') }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                @foreach (__('home.team.members') as $i => $member)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="team-member-item wow fadeInUp" data-wow-delay="{{ 0.15 * $i }}s">
+                            <div class="team-image">
+                                <figure class="image-anime">
+                                    <img src="{{ asset($member['image']) }}" alt="{{ $member['name'] }} — {{ $member['role'] }}">
+                                </figure>
+                            </div>
+                            <div class="team-content">
+                                <h3>{{ $member['name'] }}</h3>
+                                <p>{{ $member['role'] }}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    {{-- Process --}}
+    <section class="section-spacer" style="background:#f8fafc;">
         <div class="container">
             <div class="row section-row">
                 <div class="col-lg-9">

@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'meta_title' => 'About NP Dental Clinic — Sofia Dentists Trusted by UK Patients',
-    'meta_description' => 'NP Dental Clinic in Sofia — 15+ years of experience, internationally certified specialists led by Dr. Pavlina Kichukova, focused on dental implants and clear aligners for UK patients.',
+    'meta_title' => 'About NP Dental Clinic — Bulgaria Dentists Trusted by UK Patients',
+    'meta_description' => 'NP Dental Clinic in Bulgaria — 15+ years of experience, internationally certified specialists led by Dr. Pavlina Kichukova, focused on dental implants and clear aligners for UK patients.',
 
     'breadcrumb' => 'About Us',
     'hero_title' => 'About NP Dental Clinic',
 
     'intro' => [
         'eyebrow' => 'Who we are',
-        'title' => 'A Sofia dental clinic built around the patient',
+        'title' => 'A Bulgaria dental clinic built around the patient',
         'lead_1' => 'NP Dental Clinic combines modern dental technology with more than 15 years of clinical experience. Our team is specialised across the full range of dental disciplines and works as a single unit on every case — so the care you receive is consistent, considered and tailored to you.',
         'lead_2' => 'Our philosophy is simple: success comes from quality treatment, careful attention and genuine dedication to the patient. That principle shapes everything from how we plan a case to how we explain it.',
     ],
@@ -17,7 +17,7 @@ return [
     'mission' => [
         'eyebrow' => 'Our mission',
         'title' => 'Premium dental care, made accessible to UK patients',
-        'lead' => 'We make it straightforward for UK patients to receive the same quality of treatment they would expect from a top private clinic in London — using the same implant brands, the same materials and EU-regulated protocols — at a fraction of the cost, in central Sofia.',
+        'lead' => 'We make it straightforward for UK patients to receive the same quality of treatment they would expect from a top private clinic in London — using the same implant brands, the same materials and EU-regulated protocols — at a fraction of the cost, in central Bulgaria.',
         'pillars' => [
             [
                 'title' => 'Mission',
@@ -54,17 +54,28 @@ return [
             [
                 'name' => 'Dr. Pavlina Kichukova',
                 'role' => 'Lead Dentist & Founder',
+                'image' => 'images/team/poli_profile_360.jpeg',
+                'experience' => '20+ years experience',
                 'bio' => 'A highly qualified specialist with extensive experience across implantology, prosthodontics and aesthetic dentistry. Known for clinical precision and an unhurried, patient-first approach.',
             ],
             [
-                'name' => 'Mr. Karaganev',
+                'name' => 'Dr. Ali Atip',
+                'role' => 'Oral Surgery Specialist',
+                'image' => 'images/team/ali_atip.jpg',
+                'experience' => '15+ years experience',
+                'bio' => 'An experienced oral surgeon focused on implant placement and complex extractions, working closely with the team to plan and deliver each surgical stage with care.',
+            ],
+            [
+                'name' => 'Mr. Nikolai Karaganev',
                 'role' => 'Clinic Manager & Patient Coordinator',
+                'image' => 'images/team/nikolai_profile_360.jpg',
                 'bio' => 'Looks after international patients from first enquiry to final follow-up — including travel guidance, scheduling and English-language communication.',
             ],
             [
-                'name' => 'Multidisciplinary clinical team',
-                'role' => 'Implantology · Orthodontics · Paediatric · Prosthetics',
-                'bio' => 'Specialists across the major dental disciplines, working together on each case so you never need to be referred on for the next stage of treatment.',
+                'name' => 'Atanas Grozdev',
+                'role' => 'IT & Digital Systems Manager',
+                'image' => 'images/team/atanas_grozdev.jpg',
+                'bio' => 'Builds and maintains the clinic\'s websites and digital presence, administers the 2D and 3D imaging upload systems, and keeps the on-site servers and networks running reliably and securely.',
             ],
         ],
     ],
@@ -108,8 +119,8 @@ return [
 
     'visit' => [
         'eyebrow' => 'Visit us',
-        'title' => 'Where to find us in Sofia',
-        'lead' => 'Our clinic is in central Sofia, easy to reach from the international airport and within walking distance of major hotels. We can recommend hotels and arrange transfers if helpful.',
+        'title' => 'Where to find us in Bulgaria',
+        'lead' => 'Our clinic is in central Bulgaria, easy to reach from the international airport and within walking distance of major hotels. We can recommend hotels and arrange transfers if helpful.',
         'address_label' => 'Address',
         'hours_label' => 'Opening hours',
         'phone_label' => 'Phone & WhatsApp',

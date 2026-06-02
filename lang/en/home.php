@@ -1,14 +1,14 @@
 <?php
 
 return [
-    'meta_title' => 'NP Dental Clinic — Dental Implants & Aligners in Sofia for UK Patients',
+    'meta_title' => 'NP Dental Clinic — Dental Implants & Aligners in Bulgaria for UK Patients',
     'meta_description' => 'Premium dental implants and clear aligners in Sofia, Bulgaria. UK patients welcome. Straumann & Nobel Biocare implants, modern aligner systems, fully certified specialists.',
 
     'hero' => [
-        'eyebrow' => 'UK patients welcome in Sofia',
+        'eyebrow' => 'UK patients welcome in Bulgaria',
         'title' => 'A confident smile, expert dental care, a brighter tomorrow',
-        'subtitle' => 'Premium dental implants and clear aligners delivered by certified specialists at a fraction of UK private prices. Travel from the UK, recover in Sofia, smile for life.',
-        'stat_1_value' => '15+',
+        'subtitle' => 'Premium dental implants and clear aligners delivered by certified specialists at a fraction of UK private prices. Travel from the UK, recover in Bulgaria, smile for life.',
+        'stat_1_value' => '25+',
         'stat_1_label' => 'years of experience',
         'stat_2_value' => '5,000+',
         'stat_2_label' => 'happy patients',
@@ -26,7 +26,7 @@ return [
     'about' => [
         'eyebrow' => 'About the clinic',
         'title' => 'Dental care built around your comfort and your travel plans',
-        'lead' => 'NP Dental Clinic in central Sofia combines modern equipment, certified clinicians and clear communication in English. We design treatment plans that fit short visits from the UK so you save time, money and unnecessary appointments.',
+        'lead' => 'NP Dental Clinic in central Bulgaria combines modern equipment, certified clinicians and clear communication in English. We design treatment plans that fit short visits from the UK so you save time, money and unnecessary appointments.',
         'highlight_1_value' => '98%',
         'highlight_1_label' => 'aligner cases completed successfully',
         'highlight_2_value' => '100%',
@@ -74,10 +74,33 @@ return [
         ],
     ],
 
+    'team' => [
+        'eyebrow' => 'Meet the team',
+        'title' => 'The specialists who look after every UK patient',
+        'subtitle' => 'A small, experienced team that handles your treatment from first contact to final fitting — no referrals, no hand-offs.',
+        'members' => [
+            [
+                'name' => 'Mr. Nikolai Karaganev',
+                'role' => 'Clinic Manager',
+                'image' => 'images/team/nikolai_profile_360.jpg',
+            ],
+            [
+                'name' => 'Dr. Pavlina Kichukova',
+                'role' => 'Lead Dentist & Founder',
+                'image' => 'images/team/poli_profile_360.jpeg',
+            ],
+            [
+                'name' => 'Dr. Ali Atip',
+                'role' => 'Oral Surgery Specialist',
+                'image' => 'images/team/ali_atip.jpg',
+            ],
+        ],
+    ],
+
     'process' => [
         'eyebrow' => 'How it works',
         'title' => 'A treatment journey designed for UK patients',
-        'subtitle' => 'Most patients complete treatment in two short visits to Sofia. We coordinate everything around your flights and accommodation.',
+        'subtitle' => 'Most patients complete treatment in two short visits to Bulgaria. We coordinate everything around your flights and accommodation.',
         'steps' => [
             [
                 'number' => '01',
@@ -86,7 +109,7 @@ return [
             ],
             [
                 'number' => '02',
-                'title' => 'First visit to Sofia',
+                'title' => 'First visit to Bulgaria',
                 'text' => 'Examination, 3D scan and the main clinical work — implant placement or aligner fitting. Most stays last 2–4 days.',
             ],
             [
@@ -97,7 +120,7 @@ return [
             [
                 'number' => '04',
                 'title' => 'Final fitting',
-                'text' => 'A short follow-up visit to fit your final crown, bridge or aligner refinements. You leave Sofia with a finished smile.',
+                'text' => 'A short follow-up visit to fit your final crown, bridge or aligner refinements. You leave Bulgaria with a finished smile.',
             ],
         ],
     ],

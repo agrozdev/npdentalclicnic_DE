@@ -16,7 +16,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <figure class="image-anime" style="border-radius:18px;overflow:hidden;">
-                        <img src="{{ asset('images/dental-quality.jpg') }}" alt="{{ config('site.brand') }} clinic in Sofia" style="width:100%;height:auto;display:block;">
+                        <img src="{{ asset('images/dental-quality.jpg') }}" alt="{{ config('site.brand') }} clinic in Bulgaria" style="width:100%;height:auto;display:block;">
                     </figure>
                 </div>
                 <div class="col-lg-6">
@@ -107,11 +107,23 @@
             </div>
             <div class="row g-4">
                 @foreach (__('about.team.members') as $i => $member)
-                    <div class="col-lg-4 col-md-6">
-                        <div class="featured-service-card wow fadeInUp" data-wow-delay="{{ 0.15 * $i }}s">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member-item featured-service-card wow fadeInUp" data-wow-delay="{{ 0.15 * $i }}s">
+                            @if (!empty($member['image']))
+                                <div class="team-image">
+                                    <figure class="image-anime">
+                                        <img src="{{ asset($member['image']) }}" alt="{{ $member['name'] }} — {{ $member['role'] }}">
+                                    </figure>
+                                </div>
+                            @endif
                             <div class="service-body">
                                 <h3>{{ $member['name'] }}</h3>
                                 <p style="color:#0f766e;font-weight:600;margin-bottom:8px;">{{ $member['role'] }}</p>
+                                @if (!empty($member['experience']))
+                                    <div style="margin-bottom:14px;">
+                                        <span style="display:inline-block;background:#0f766e;color:#fff;font-weight:600;font-size:0.85rem;line-height:1.2;padding:5px 14px;border-radius:999px;">{{ $member['experience'] }}</span>
+                                    </div>
+                                @endif
                                 <p>{{ $member['bio'] }}</p>
                             </div>
                         </div>

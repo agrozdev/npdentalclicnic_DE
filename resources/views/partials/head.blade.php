@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ $descText }}">
-<meta name="keywords" content="dental implants UK, clear aligners UK, dental tourism Bulgaria, Sofia dentist, NP Dental Clinic">
+<meta name="keywords" content="dental implants UK, clear aligners UK, dental tourism Bulgaria, Bulgaria dentist, NP Dental Clinic">
 <meta name="author" content="{{ $brand }}">
 
 <meta property="og:type" content="website">

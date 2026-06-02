@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'meta_title' => 'Clear Dental Aligners in Sofia for UK Patients | NP Dental Clinic',
+    'meta_title' => 'Clear Dental Aligners in Bulgaria for UK Patients | NP Dental Clinic',
     'meta_description' => 'Discreet clear dental aligners in Sofia, Bulgaria. Straighten your teeth with modern, almost invisible aligners — designed and monitored by certified specialists.',
 
     'breadcrumb' => 'Dental Aligners',
@@ -61,7 +61,7 @@ return [
             [
                 'number' => '04',
                 'title' => 'Bi-weekly progress',
-                'text' => 'You change to a new aligner every 1–2 weeks. We monitor progress remotely between visits to Sofia.',
+                'text' => 'You change to a new aligner every 1–2 weeks. We monitor progress remotely between visits to Bulgaria.',
             ],
         ],
     ],

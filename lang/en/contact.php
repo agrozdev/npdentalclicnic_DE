@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'meta_title' => 'Contact NP Dental Clinic | Dental Implants & Aligners in Sofia',
+    'meta_title' => 'Contact NP Dental Clinic | Dental Implants & Aligners in Bulgaria',
     'meta_description' => 'Contact NP Dental Clinic in Sofia, Bulgaria. Phone, WhatsApp, email and a contact form — UK patients welcome. We typically reply within 48 hours.',
 
     'breadcrumb' => 'Contact Us',

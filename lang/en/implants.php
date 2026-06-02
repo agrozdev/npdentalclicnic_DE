@@ -1,14 +1,14 @@
 <?php
 
 return [
-    'meta_title' => 'Dental Implants in Sofia for UK Patients | NP Dental Clinic',
+    'meta_title' => 'Dental Implants in Bulgaria for UK Patients | NP Dental Clinic',
     'meta_description' => 'Straumann and Nobel Biocare dental implants placed in Sofia, Bulgaria. Single tooth, bridges and full-arch All-on-4 & All-on-6 with internationally certified surgeons.',
 
     'breadcrumb' => 'Dental Implants',
 
     'hero' => [
         'title' => 'Dental Implants — a permanent answer to missing teeth',
-        'subtitle' => 'Premium implants placed by experienced surgeons in central Sofia. Designed to look, feel and function like natural teeth, for life.',
+        'subtitle' => 'Premium implants placed by experienced surgeons in central Bulgaria. Designed to look, feel and function like natural teeth, for life.',
     ],
 
     'intro' => [
@@ -80,7 +80,7 @@ return [
             [
                 'number' => '04',
                 'title' => 'Final restoration',
-                'text' => 'After healing, we fit your permanent crown, bridge or full-arch prosthesis — and you leave Sofia with a finished smile.',
+                'text' => 'After healing, we fit your permanent crown, bridge or full-arch prosthesis — and you leave Bulgaria with a finished smile.',
             ],
         ],
     ],

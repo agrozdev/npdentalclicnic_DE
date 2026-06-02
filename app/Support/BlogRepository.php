@@ -19,13 +19,13 @@ class BlogRepository
             ],
             [
                 'slug' => 'clear-dental-aligners-uk-patients-sofia-guide',
-                'title' => 'Clear dental aligners: a UK patient’s guide to treatment in Sofia',
-                'excerpt' => 'How clear aligners work, who they suit, what treatment in Sofia looks like, what it costs compared to UK private prices, and how to know whether aligners — or fixed braces — are right for your case.',
+                'title' => 'Clear dental aligners: a UK patient’s guide to treatment in Bulgaria',
+                'excerpt' => 'How clear aligners work, who they suit, what treatment in Bulgaria looks like, what it costs compared to UK private prices, and how to know whether aligners — or fixed braces — are right for your case.',
                 'image' => 'dental-aligners.jpg',
                 'author' => 'Dr. NP Dental Team',
                 'date' => '2026-04-26',
                 'reading_time' => 9,
-                'view' => 'blog.posts.clear-aligners-uk-sofia-guide',
+                'view' => 'blog.posts.clear-aligners-uk-bulgaria-guide',
             ],
             [
                 'slug' => 'why-uk-patients-choose-bulgaria-for-dental-care',
