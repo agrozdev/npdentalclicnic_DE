@@ -53,12 +53,18 @@ class ContactController extends Controller
                     'data' => $data,
                 ]);
             } catch (\Throwable $logError) {
-                error_log('Contact form mail failed: '.$e->getMessage());
+                error_log('Contact form mail failed: '.$e->getMessage().' (logging also failed: '.$logError->getMessage().')');
             }
+
+            // When debugging (APP_DEBUG=true) surface the real SMTP error so it can
+            // be diagnosed from the browser. Keep APP_DEBUG=false in production.
+            $message = config('app.debug')
+                ? __('contact.form.error').' [debug: '.$e->getMessage().']'
+                : __('contact.form.error');
 
             return back()
                 ->withInput()
-                ->with('contact_error', __('contact.form.error'));
+                ->with('contact_error', $message);
         }
 
         return redirect()
