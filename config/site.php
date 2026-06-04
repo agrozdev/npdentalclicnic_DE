@@ -10,7 +10,7 @@ return [
         'whatsapp_e164' => '359887570020',
         'whatsapp_display' => '+359 88 757 0020',
         'whatsapp_phone_e164' => '+359887570020',
-        'email' => 'info@npdentalclinic.com',
+        'email' => 'info@npdentalclinic.co.uk',
         'hours' => 'Mon–Sun 8:00–20:00',
         'address_lines' => [
             'ul. Akademik Yordan Trifonov 5',

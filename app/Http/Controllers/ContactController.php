@@ -45,10 +45,16 @@ class ContactController extends Controller
                 }
             );
         } catch (\Throwable $e) {
-            Log::error('Contact form mail failed', [
-                'error' => $e->getMessage(),
-                'data' => $data,
-            ]);
+            // Never let a logging failure (e.g. unwritable storage/logs) turn a
+            // handled mail error into an unhandled 500 that hides the response.
+            try {
+                Log::error('Contact form mail failed', [
+                    'error' => $e->getMessage(),
+                    'data' => $data,
+                ]);
+            } catch (\Throwable $logError) {
+                error_log('Contact form mail failed: '.$e->getMessage());
+            }
 
             return back()
                 ->withInput()
