@@ -30,17 +30,25 @@ class ContactController extends Controller
 
         $to = config('site.contact.form_recipients', [config('site.contact.email')]);
 
+        // Identify which site/domain the enquiry came from (multiple npdental sites).
+        $siteName = config('site.brand');
+        $sourceHost = $request->getHost();
+        $sourceUrl = $request->headers->get('referer') ?: $request->root();
+
         try {
             Mail::raw(
-                "New contact enquiry from the website\n\n"
+                "New contact enquiry from {$siteName} ({$sourceHost})\n\n"
+                ."Site: {$siteName}\n"
+                ."Domain: {$sourceHost}\n"
+                ."Page: {$sourceUrl}\n\n"
                 ."Name: {$data['name']}\n"
                 ."Email: {$data['email']}\n"
                 ."Phone: ".($data['phone'] ?? 'n/a')."\n"
                 ."Subject: {$data['subject']}\n\n"
                 ."Message:\n{$data['message']}\n",
-                function ($message) use ($to, $data) {
+                function ($message) use ($to, $data, $siteName, $sourceHost) {
                     $message->to($to)
-                        ->subject('New website enquiry — '.$data['subject'])
+                        ->subject("New enquiry — {$siteName} ({$sourceHost}) — ".$data['subject'])
                         ->replyTo($data['email'], $data['name']);
                 }
             );
