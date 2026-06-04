@@ -264,21 +264,24 @@
     box-shadow: 0 0 0 3px rgba(15,118,110,0.15);
 }
 .contact-form .form-error { color: #b91c1c; font-size: 13px; margin-top: -8px; margin-bottom: 12px; }
-.contact-form .form-success {
-    background: #ecfdf5;
+.form-success {
+    background: #d1fae5;
     color: #065f46;
-    padding: 14px 18px;
+    border: 1px solid #34d399;
+    padding: 16px 20px;
     border-radius: 10px;
     margin-bottom: 18px;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 600;
 }
-.contact-form .form-error-banner {
+.form-error-banner {
     background: #fef2f2;
     color: #991b1b;
-    padding: 14px 18px;
+    border: 1px solid #f87171;
+    padding: 16px 20px;
     border-radius: 10px;
     margin-bottom: 18px;
-    font-size: 14px;
+    font-size: 15px;
 }
 .contact-form .form-check { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 16px; font-size: 14px; }
 .contact-form textarea.form-control { min-height: 160px; resize: vertical; }

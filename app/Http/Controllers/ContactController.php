@@ -28,7 +28,7 @@ class ContactController extends Controller
             'website' => ['nullable', 'size:0'],
         ])->validate();
 
-        $to = config('site.contact.email');
+        $to = config('site.contact.form_recipients', [config('site.contact.email')]);
 
         try {
             Mail::raw(
