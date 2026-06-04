@@ -37,3 +37,28 @@
     });
 })();
 </script>
+
+<!-- Google Ads — WhatsApp Click conversion -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18212143061/3KEtCLLr7bgcENX_nOxD',
+      'event_callback': callback
+  });
+  return false;
+}
+
+// WhatsApp links open in a new tab (target="_blank"), so the page stays put —
+// we just report the conversion on click. Covers every wa.me link sitewide.
+document.addEventListener('click', function (e) {
+  var link = e.target.closest('a[href*="wa.me"]');
+  if (link) {
+    gtag('event', 'conversion', { 'send_to': 'AW-18212143061/3KEtCLLr7bgcENX_nOxD' });
+  }
+});
+</script>

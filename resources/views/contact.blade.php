@@ -79,6 +79,10 @@
 
                     @if (session('contact_success'))
                         <div class="form-success">{{ session('contact_success') }}</div>
+                        <!-- Event snippet for Contact Form Submit conversion page -->
+                        <script>
+                          gtag('event', 'conversion', {'send_to': 'AW-18212143061/RnylCJj66rgcENX_nOxD'});
+                        </script>
                     @endif
                     @if (session('contact_error'))
                         <div class="form-error-banner">{{ session('contact_error') }}</div>
