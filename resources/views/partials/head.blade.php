@@ -2,6 +2,7 @@
     $brand = config('site.brand');
     $titleText = isset($title) ? $title.' | '.$brand : $brand.' — '.config('site.tagline');
     $descText = $description ?? config('site.tagline');
+    $ogImage = isset($ogImage) ? asset($ogImage) : asset('images/npdental-hero-image.jpg');
 @endphp
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,21 +15,31 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
+  // GA4 config
   gtag('config', 'G-BJ0EC34JEL');
+
+  // Google Ads config
+  gtag('config', 'AW-18212143061');
 </script>
 <meta name="description" content="{{ $descText }}">
 <meta name="keywords" content="dental implants UK, clear aligners UK, dental tourism Bulgaria, Bulgaria dentist, NP Dental Clinic">
 <meta name="author" content="{{ $brand }}">
 <meta name="google-site-verification" content="Ap0vBBSLVTZ57Qs-NZUpsyRWEXRzNhpC2FA4h7QP0xw" />
 
+<link rel="canonical" href="{{ url()->current() }}">
+
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ $titleText }}">
 <meta property="og:description" content="{{ $descText }}">
 <meta property="og:url" content="{{ url()->current() }}">
 <meta property="og:site_name" content="{{ $brand }}">
+<meta property="og:image" content="{{ $ogImage }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ $titleText }}">
 <meta name="twitter:description" content="{{ $descText }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
 
 <title>{{ $titleText }}</title>
 
@@ -48,3 +59,5 @@
 <link rel="stylesheet" href="{{ asset('css/twentytwenty.css') }}">
 <link href="{{ asset('css/custom.css') }}" rel="stylesheet" media="screen">
 <link href="{{ asset('css/dental-site.css') }}" rel="stylesheet" media="screen">
+
+@include('partials.schema')

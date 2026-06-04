@@ -10,6 +10,38 @@
         'breadcrumb' => __('aligners.breadcrumb'),
     ])
 
+    @push('scripts')
+    <script type="application/ld+json">
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'MedicalWebPage',
+        '@id' => url()->current() . '#webpage',
+        'name' => __('aligners.hero.title'),
+        'url' => url()->current(),
+        'description' => __('aligners.meta_description'),
+        'inLanguage' => 'en-GB',
+        'isPartOf' => ['@id' => rtrim(url('/'), '/') . '/#website'],
+        'about' => [
+            '@type' => 'MedicalProcedure',
+            'name' => 'Clear Aligner Orthodontic Treatment',
+            'procedureType' => 'TherapeuticProcedure',
+            'bodyLocation' => 'Teeth',
+        ],
+        'provider' => ['@id' => rtrim(url('/'), '/') . '/#organization'],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+    </script>
+    <script type="application/ld+json">
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => rtrim(url('/'), '/') . '/'],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => __('aligners.breadcrumb'), 'item' => url()->current()],
+        ],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+    </script>
+    @endpush
+
     {{-- Intro --}}
     <section class="section-spacer">
         <div class="container">

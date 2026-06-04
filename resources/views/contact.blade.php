@@ -28,9 +28,11 @@
                         <div class="icon-box"><img src="{{ asset('images/icon-location-info.svg') }}" alt=""></div>
                         <div class="contact-us-item-content">
                             <h3>{{ __('contact.cards.address_title') }}</h3>
-                            @foreach (config('site.contact.address_lines') as $line)
-                                <p>{{ $line }}</p>
-                            @endforeach
+                            <a href="https://www.google.com/maps/search/?api=1&query={{ urlencode(config('site.contact.map_query')) }}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">
+                                @foreach (config('site.contact.address_lines') as $line)
+                                    <p>{{ $line }}</p>
+                                @endforeach
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +41,7 @@
                         <div class="icon-box"><img src="{{ asset('images/icon-phone-info.svg') }}" alt=""></div>
                         <div class="contact-us-item-content">
                             <h3>{{ __('contact.cards.phone_title') }}</h3>
-                            <p><a href="tel:{{ config('site.contact.phone_e164') }}" style="color:inherit;">{{ config('site.contact.phone_display') }}</a></p>
+                            <p><a href="https://wa.me/{{ config('site.contact.whatsapp_e164') }}" target="_blank" rel="noopener" style="color:inherit;">{{ config('site.contact.phone_display') }}</a></p>
                             <p>
                                 <a href="https://wa.me/{{ config('site.contact.whatsapp_e164') }}" target="_blank" rel="noopener" style="color:#25D366;font-weight:600;">
                                     <i class="fa-brands fa-whatsapp"></i>&nbsp; {{ __('cta.whatsapp') }}

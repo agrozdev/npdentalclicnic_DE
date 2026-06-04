@@ -12,6 +12,11 @@
                     <div class="footer-contact-content">
                         <h3><a href="mailto:{{ config('site.contact.email') }}" style="color:inherit;text-decoration:none;">{{ config('site.contact.email') }}</a></h3>
                         <h3><a href="tel:{{ config('site.contact.phone_e164') }}" style="color:inherit;text-decoration:none;">{{ config('site.contact.phone_display') }}</a></h3>
+                        <address style="font-style:normal;margin-top:12px;opacity:.85;">
+                            @foreach (config('site.contact.address_lines') as $line)
+                                {{ $line }}@if (!$loop->last)<br>@endif
+                            @endforeach
+                        </address>
                     </div>
                 </div>
             </div>

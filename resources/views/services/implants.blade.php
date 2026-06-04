@@ -10,6 +10,38 @@
         'breadcrumb' => __('implants.breadcrumb'),
     ])
 
+    @push('scripts')
+    <script type="application/ld+json">
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'MedicalWebPage',
+        '@id' => url()->current() . '#webpage',
+        'name' => __('implants.hero.title'),
+        'url' => url()->current(),
+        'description' => __('implants.meta_description'),
+        'inLanguage' => 'en-GB',
+        'isPartOf' => ['@id' => rtrim(url('/'), '/') . '/#website'],
+        'about' => [
+            '@type' => 'MedicalProcedure',
+            'name' => 'Dental Implant Surgery',
+            'procedureType' => 'SurgicalProcedure',
+            'bodyLocation' => 'Jaw',
+        ],
+        'provider' => ['@id' => rtrim(url('/'), '/') . '/#organization'],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+    </script>
+    <script type="application/ld+json">
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => rtrim(url('/'), '/') . '/'],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => __('implants.breadcrumb'), 'item' => url()->current()],
+        ],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+    </script>
+    @endpush
+
     {{-- Intro --}}
     <section class="section-spacer">
         <div class="container">

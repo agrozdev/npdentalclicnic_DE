@@ -22,7 +22,7 @@
                     </p>
 
                     <div class="post-cover">
-                        <img src="{{ asset('images/' . $post['image']) }}" alt="{{ $post['title'] }}">
+                        <img src="{{ asset('images/' . $post['image']) }}" alt="{{ $post['title'] }}" width="1200" height="800" fetchpriority="high" decoding="async">
                     </div>
 
                     <div class="post-body">
@@ -49,7 +49,7 @@
                         <div class="col-lg-6">
                             <article class="post-card">
                                 <a href="{{ route('blog.show', $rp['slug']) }}" class="post-cover">
-                                    <img src="{{ asset('images/' . $rp['image']) }}" alt="{{ $rp['title'] }}">
+                                    <img src="{{ asset('images/' . $rp['image']) }}" alt="{{ $rp['title'] }}" width="1200" height="800" loading="lazy" decoding="async">
                                 </a>
                                 <div class="post-body">
                                     <p class="post-meta">{{ \Carbon\Carbon::parse($rp['date'])->format('j M Y') }}</p>
@@ -65,3 +65,34 @@
     </article>
 
 @endsection
+
+@push('scripts')
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BlogPosting',
+    '@id' => url()->current() . '#article',
+    'headline' => $post['title'],
+    'description' => $post['excerpt'],
+    'image' => asset('images/' . $post['image']),
+    'url' => url()->current(),
+    'datePublished' => $post['date'],
+    'dateModified' => $post['modified'] ?? $post['date'],
+    'author' => ['@type' => 'Person', 'name' => $post['author'], 'url' => route('about')],
+    'publisher' => ['@id' => rtrim(url('/'), '/') . '/#organization'],
+    'mainEntityOfPage' => ['@type' => 'WebPage', '@id' => url()->current()],
+    'inLanguage' => 'en-GB',
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+</script>
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => rtrim(url('/'), '/') . '/'],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => __('nav.blog'), 'item' => route('blog.index')],
+        ['@type' => 'ListItem', 'position' => 3, 'name' => $post['title'], 'item' => url()->current()],
+    ],
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endpush

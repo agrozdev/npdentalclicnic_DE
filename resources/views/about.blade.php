@@ -10,6 +10,19 @@
         'breadcrumb' => __('about.breadcrumb'),
     ])
 
+    @push('scripts')
+    <script type="application/ld+json">
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => rtrim(url('/'), '/') . '/'],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => __('about.breadcrumb'), 'item' => url()->current()],
+        ],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+    </script>
+    @endpush
+
     {{-- Intro --}}
     <section class="section-spacer">
         <div class="container">
@@ -112,7 +125,7 @@
                             @if (!empty($member['image']))
                                 <div class="team-image">
                                     <figure class="image-anime">
-                                        <img src="{{ asset($member['image']) }}" alt="{{ $member['name'] }} — {{ $member['role'] }}">
+                                        <img src="{{ asset($member['image']) }}" alt="{{ $member['name'] }} — {{ $member['role'] }}" width="360" height="325" loading="lazy" decoding="async">
                                     </figure>
                                 </div>
                             @endif

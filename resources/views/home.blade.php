@@ -44,7 +44,7 @@
                         <div class="hero-image">
                             <div class="hero-img">
                                 <figure class="image-anime reveal">
-                                    <img src="{{ asset('images/npdental-hero-image.jpg') }}" alt="{{ config('site.brand') }} clinic">
+                                    <img src="{{ asset('images/npdental-hero-image.jpg') }}" alt="{{ config('site.brand') }} clinic" width="554" height="608" fetchpriority="high" decoding="async">
                                 </figure>
                             </div>
                             <div class="company-service-rating">
@@ -81,7 +81,7 @@
                     <div class="about-image">
                         <div class="about-img">
                             <figure class="image-anime">
-                                <img src="{{ asset('images/dental-quality.jpg') }}" alt="Dental quality and certifications at {{ config('site.brand') }}">
+                                <img src="{{ asset('images/dental-quality.jpg') }}" alt="Dental quality and certifications at {{ config('site.brand') }}" width="602" height="668" loading="lazy" decoding="async">
                             </figure>
                         </div>
                         <div class="company-experience has-bg-image" style="background-image: url('{{ asset('images/dental-experience.jpg') }}');">
@@ -152,7 +152,7 @@
                 <div class="col-lg-6">
                     <div class="featured-service-card wow fadeInUp">
                         <div class="service-cover">
-                            <img src="{{ asset('images/dental-implants.jpg') }}" alt="{{ __('home.services.implants.title') }}">
+                            <img src="{{ asset('images/dental-implants.jpg') }}" alt="{{ __('home.services.implants.title') }}" width="1200" height="800" loading="lazy" decoding="async">
                         </div>
                         <div class="service-body">
                             <h3>{{ __('home.services.implants.title') }}</h3>
@@ -165,7 +165,7 @@
                 <div class="col-lg-6">
                     <div class="featured-service-card wow fadeInUp" data-wow-delay="0.2s">
                         <div class="service-cover">
-                            <img src="{{ asset('images/dental-aligners.jpg') }}" alt="{{ __('home.services.aligners.title') }}">
+                            <img src="{{ asset('images/dental-aligners.jpg') }}" alt="{{ __('home.services.aligners.title') }}" width="1200" height="800" loading="lazy" decoding="async">
                         </div>
                         <div class="service-body">
                             <h3>{{ __('home.services.aligners.title') }}</h3>
@@ -226,7 +226,7 @@
                         <div class="team-member-item wow fadeInUp" data-wow-delay="{{ 0.15 * $i }}s">
                             <div class="team-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset($member['image']) }}" alt="{{ $member['name'] }} — {{ $member['role'] }}">
+                                    <img src="{{ asset($member['image']) }}" alt="{{ $member['name'] }} — {{ $member['role'] }}" width="360" height="325" loading="lazy" decoding="async">
                                 </figure>
                             </div>
                             <div class="team-content">
