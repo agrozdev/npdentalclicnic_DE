@@ -219,7 +219,7 @@
                 <div class="col-lg-5">
                     <div class="contact-us-item wow fadeInUp" style="margin-bottom:20px;">
                         <div class="icon-box"><img src="{{ asset('images/icon-location-info.svg') }}" alt=""></div>
-                        <div class="contact-us-item-content">
+                        <div class="contact-info-content">
                             <h3>{{ __('about.visit.address_label') }}</h3>
                             @foreach (config('site.contact.address_lines') as $line)
                                 <p>{{ $line }}</p>
@@ -228,7 +228,7 @@
                     </div>
                     <div class="contact-us-item wow fadeInUp" data-wow-delay="0.15s" style="margin-bottom:20px;">
                         <div class="icon-box"><img src="{{ asset('images/icon-phone-info.svg') }}" alt=""></div>
-                        <div class="contact-us-item-content">
+                        <div class="contact-info-content">
                             <h3>{{ __('about.visit.phone_label') }}</h3>
                             <p><a href="tel:{{ config('site.contact.phone_e164') }}" style="color:inherit;">{{ config('site.contact.phone_display') }}</a></p>
                             <p><a href="https://wa.me/{{ config('site.contact.whatsapp_e164') }}" target="_blank" rel="noopener" style="color:#25D366;font-weight:600;"><i class="fa-brands fa-whatsapp"></i>&nbsp; {{ __('cta.whatsapp') }}</a></p>
@@ -236,7 +236,7 @@
                     </div>
                     <div class="contact-us-item wow fadeInUp" data-wow-delay="0.3s" style="margin-bottom:20px;">
                         <div class="icon-box"><img src="{{ asset('images/icon-watch-info.svg') }}" alt=""></div>
-                        <div class="contact-us-item-content">
+                        <div class="contact-info-content">
                             <h3>{{ __('about.visit.hours_label') }}</h3>
                             <p>{{ config('site.contact.hours') }}</p>
                         </div>

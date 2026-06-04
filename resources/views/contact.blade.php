@@ -26,7 +26,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="contact-us-item wow fadeInUp">
                         <div class="icon-box"><img src="{{ asset('images/icon-location-info.svg') }}" alt=""></div>
-                        <div class="contact-us-item-content">
+                        <div class="contact-info-content">
                             <h3>{{ __('contact.cards.address_title') }}</h3>
                             <a href="https://www.google.com/maps/search/?api=1&query={{ urlencode(config('site.contact.map_query')) }}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">
                                 @foreach (config('site.contact.address_lines') as $line)
@@ -39,7 +39,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="contact-us-item wow fadeInUp" data-wow-delay="0.15s">
                         <div class="icon-box"><img src="{{ asset('images/icon-phone-info.svg') }}" alt=""></div>
-                        <div class="contact-us-item-content">
+                        <div class="contact-info-content">
                             <h3>{{ __('contact.cards.phone_title') }}</h3>
                             <p><a href="https://wa.me/{{ config('site.contact.whatsapp_e164') }}" target="_blank" rel="noopener" style="color:inherit;">{{ config('site.contact.phone_display') }}</a></p>
                             <p>
@@ -53,7 +53,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="contact-us-item wow fadeInUp" data-wow-delay="0.3s">
                         <div class="icon-box"><img src="{{ asset('images/icon-phone-info.svg') }}" alt=""></div>
-                        <div class="contact-us-item-content">
+                        <div class="contact-info-content">
                             <h3>{{ __('contact.cards.email_title') }}</h3>
                             <p><a href="mailto:{{ config('site.contact.email') }}" style="color:inherit;">{{ config('site.contact.email') }}</a></p>
                         </div>
@@ -62,7 +62,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="contact-us-item wow fadeInUp" data-wow-delay="0.45s">
                         <div class="icon-box"><img src="{{ asset('images/icon-watch-info.svg') }}" alt=""></div>
-                        <div class="contact-us-item-content">
+                        <div class="contact-info-content">
                             <h3>{{ __('contact.cards.hours_title') }}</h3>
                             <p>{{ config('site.contact.hours') }}</p>
                         </div>
