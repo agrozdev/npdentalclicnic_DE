@@ -17,10 +17,10 @@
 
     @include('partials.footer')
 
-    @include('partials.whatsapp-fab')
     @include('partials.cookie-banner')
 
     @include('partials.scripts')
     @stack('scripts')
+    @include('partials.chat-widget')
 </body>
 </html>
