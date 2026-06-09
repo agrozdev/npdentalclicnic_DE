@@ -51,8 +51,7 @@ class ChatKnowledgeSeeder extends Seeder
                 'title'    => 'Contact details — phone, email, hours',
                 'keywords' => 'phone, email, contact, call, telephone, hours, open, number, обадете, телефон, работно',
                 'content'  => 'You can reach NP Dental Clinic through the following channels:
-Phone / WhatsApp: +359 878 106603 (Manager)
-Phone / WhatsApp: +359 898 652858 (Dr. Kichukova)
+Phone / WhatsApp: +359 887 570020
 Email: info@npdentalclinic.com
 Address: Akademik Yordan Trifonov 6A, entrance B, ground floor, Sofia, Bulgaria
 Working hours: Monday to Sunday, 08:00 to 20:00 (7 days a week).',
@@ -77,14 +76,15 @@ The clinic welcomes patients of all ages and also accepts Bulgarian National Hea
             [
                 'type'     => 'service',
                 'title'    => 'Dental Implants',
-                'keywords' => 'implant, implants, missing tooth, missing teeth, permanent, swiss, зъбен имплант, импланти, швейцарски',
+                'keywords' => 'implant, implants, missing tooth, missing teeth, permanent, swiss, зъбен имплант, импланти, швейцарски, warranty, guarantee, lifetime, гаранция, доживотна',
                 'content'  => 'We use Swiss dental implants — the highest quality available. The implant includes the crown at no extra cost. Treatment is structured across 3 visits on 3 consecutive days:
 Visit 1: Implant placement
 Visit 2: Crown impression (taking the measurement for the crown)
 Visit 3: Crown placement
 Alternatively, all stages can be completed in 2 visits with a 6-day stay in Sofia.
 Price: £1,400 - £1,800 per implant (crown included).
-Hotel and airport transfer are included for international patients — you only pay for your flights. Success rates exceed 95%.',
+Hotel and airport transfer are included for international patients — you only pay for your flights. Success rates exceed 95%.
+Warranty: Our Swiss dental implants come with a lifetime guarantee. If the implant fails for any structural reason, we will replace it at no cost to you.',
                 'priority' => 9,
             ],
             [
