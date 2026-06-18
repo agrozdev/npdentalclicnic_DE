@@ -43,6 +43,20 @@
                 </div>
 
                 <div class="navbar-toggle"></div>
+
+                {{-- Language switcher --}}
+                <div class="language-switcher d-flex align-items-center" style="margin-left:12px;gap:6px;white-space:nowrap;">
+                    @foreach(config('site.locales') as $code => $label)
+                        @if(app()->getLocale() === $code)
+                            <span style="font-weight:700;font-size:13px;text-transform:uppercase;color:#b8943a;">{{ $code }}</span>
+                        @else
+                            <a href="{{ route('locale.switch', $code) }}"
+                               style="font-size:13px;text-transform:uppercase;color:#555;text-decoration:none;"
+                               title="{{ $label }}">{{ $code }}</a>
+                        @endif
+                        @if(!$loop->last)<span style="color:#ccc;">|</span>@endif
+                    @endforeach
+                </div>
             </div>
         </nav>
         <div class="responsive-menu"></div>

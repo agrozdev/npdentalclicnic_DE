@@ -2,7 +2,7 @@
 
 return [
     'brand' => 'NP Dental Clinic',
-    'tagline' => 'Premium dental implants & aligners in Bulgaria for UK patients',
+    'tagline' => 'Premium-Zahnimplantate & Zahnschienen in Bulgarien für deutsche Patienten',
 
     'contact' => [
         'phone_display' => '+359 89 865 2858',
@@ -32,8 +32,9 @@ return [
     ],
 
     'locales' => [
+        'de' => 'Deutsch',
         'en' => 'English',
     ],
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'de',
 ];
