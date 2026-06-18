@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\NewChatLead;
 use App\Models\ChatLead;
 use App\Models\ChatMessage;
 use App\Services\KnowledgeService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class ChatController extends Controller
 {
@@ -26,6 +29,8 @@ class ChatController extends Controller
         $messages      = $request->input('messages');
         $sessionToken  = $request->input('session_token');
         $lastUserMsg   = collect($messages)->last(fn ($m) => $m['role'] === 'user')['content'] ?? '';
+
+        $isNewLead = ! ChatLead::where('session_token', $sessionToken)->exists();
 
         $lead = $this->resolveLead($request, $sessionToken, $lastUserMsg);
 
@@ -48,16 +53,57 @@ class ChatController extends Controller
         $aiMessage       = trim(str_replace('[WHATSAPP]', '', $raw));
 
         if (! $aiMessage) {
-            $aiMessage = 'Sorry, I could not process your request.';
+            $aiMessage = 'Es tut mir leid, ich konnte Ihre Anfrage nicht verarbeiten.';
         }
 
         ChatMessage::create(['lead_id' => $lead->id, 'role' => 'user',      'content' => $lastUserMsg]);
         ChatMessage::create(['lead_id' => $lead->id, 'role' => 'assistant', 'content' => $aiMessage]);
 
+        if ($isNewLead && ! $this->isSpam($lastUserMsg)) {
+            $allMessages = array_merge($messages, [['role' => 'assistant', 'content' => $aiMessage]]);
+            try {
+                Mail::to('atanasgrozdev@yahoo.com')
+                    ->cc('info@npdentalclinic.com')
+                    ->send(new NewChatLead($lead, $allMessages, $aiMessage));
+            } catch (\Throwable $e) {
+                Log::error('Chat lead email failed: ' . $e->getMessage(), [
+                    'lead_id' => $lead->id,
+                    'trace'   => $e->getTraceAsString(),
+                ]);
+            }
+        }
+
         return response()->json([
             'message'          => $aiMessage,
             'suggest_whatsapp' => $suggestWhatsapp,
         ]);
+    }
+
+    private function isSpam(string $message): bool
+    {
+        $clean = trim($message);
+
+        if (mb_strlen($clean) < 10) {
+            return true;
+        }
+
+        $spamPatterns = [
+            '/^(test|testing|hi|hey|hello|helo|hola|yo|sup|check|asdf|qwerty|aaa+|bbb+|123+|xxx+|hallo|testen)[\s!?.]*$/i',
+            '/^[^a-z\p{L}]+$/iu',
+        ];
+
+        foreach ($spamPatterns as $pattern) {
+            if (preg_match($pattern, $clean)) {
+                return true;
+            }
+        }
+
+        $letterCount = preg_match_all('/\p{L}/u', $clean);
+        if ($letterCount / mb_strlen($clean) < 0.4) {
+            return true;
+        }
+
+        return false;
     }
 
     private function resolveLead(Request $request, string $token, string $firstMessage): ChatLead
@@ -82,8 +128,8 @@ class ChatController extends Controller
     private function buildSystemPrompt(string $kbContext): string
     {
         $prompt = <<<'PROMPT'
-You are a helpful assistant for NP Dental Clinic (npdentalclinic.co.uk).
-Always answer in the same language the client uses (English or Bulgarian).
+You are a helpful assistant for NP Dental Clinic (npdentalclinic.de).
+Always answer in the same language the client uses (German or English).
 Be warm, professional and concise.
 IMPORTANT: Reply in plain text only. Do not use markdown, asterisks, bold, headers, bullet symbols, or any formatting characters.
 IMPORTANT: Keep answers short and directly matched to what was asked. If someone asks whether a service exists, confirm yes or no in one sentence and add one key detail at most. Do not volunteer prices, procedures, travel info, or doctor names unless the patient specifically asks about those things. Only expand when the patient asks a follow-up. Always add [WHATSAPP] on a new line at the very end of your response in these specific situations: the patient asks how to book an appointment, wants to schedule a visit, asks about availability, needs an exact personalised price quote, has a dental emergency, or asks something you have absolutely no information about. Do NOT add [WHATSAPP] for general service questions. Never add [WHATSAPP] more than once per response.
@@ -97,6 +143,7 @@ Clinic info:
 - Hours: Monday to Sunday, 08:00 - 20:00
 - Lead dentist: Dr. Pavlina Kichukova, 15+ years experience
 - Oral surgery specialist: Dr. Ali Atip (implants, extractions, surgical procedures)
+- Clinic manager: Nikolay Karaganev — only share his phone +359 878 106603 if the patient specifically asks to speak to the manager or requests the manager's contact details
 - Services: dental implants (Swiss, crown included), zirconia veneers/crowns, clear aligners, whitening, laser dentistry, oral surgery, pediatric dentistry, prosthetics, general dentistry
 
 Travel package (international patients):

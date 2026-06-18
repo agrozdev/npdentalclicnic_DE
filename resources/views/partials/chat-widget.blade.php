@@ -2,7 +2,7 @@
 <div id="np-chat-widget">
 
     {{-- Bubble trigger --}}
-    <button id="np-chat-bubble" aria-label="Open chat" title="Chat with us">
+    <button id="np-chat-bubble" aria-label="Chat öffnen" title="Chatten Sie mit uns">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round"
                 d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/>
@@ -13,38 +13,38 @@
     <div id="np-chat-window" role="dialog" aria-label="NP Dental Chat" hidden>
 
         <div id="np-chat-header">
-            <span>NP Dental — Ask us anything</span>
+            <span>NP Dental — Stellen Sie uns Ihre Fragen</span>
             <div style="display:flex;align-items:center;gap:8px;">
-                <button id="np-chat-reset" aria-label="Reset chat" title="Start a new conversation">
+                <button id="np-chat-reset" aria-label="Chat zurücksetzen" title="Neues Gespräch starten">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
                         <path d="M3 3v5h5"/>
                     </svg>
                 </button>
-                <button id="np-chat-close" aria-label="Close chat">&times;</button>
+                <button id="np-chat-close" aria-label="Chat schließen">&times;</button>
             </div>
         </div>
 
         {{-- Step 1: contact form --}}
         <div id="np-contact-step">
-            <p id="np-contact-intro">Before we start, please share your details so our team can follow up if needed.</p>
+            <p id="np-contact-intro">Bevor wir beginnen, teilen Sie uns bitte Ihre Kontaktdaten mit, damit unser Team sich bei Bedarf bei Ihnen melden kann.</p>
             <form id="np-contact-form" autocomplete="off" novalidate>
                 <div class="np-field">
-                    <label for="np-field-name">Your name <span class="np-req">*</span></label>
-                    <input id="np-field-name" type="text" placeholder="John Smith" autocomplete="name" />
+                    <label for="np-field-name">Ihr Name <span class="np-req">*</span></label>
+                    <input id="np-field-name" type="text" placeholder="Max Mustermann" autocomplete="name" />
                     <span class="np-err" id="np-err-name"></span>
                 </div>
                 <div class="np-field">
-                    <label for="np-field-phone">Phone number <span class="np-req">*</span></label>
-                    <input id="np-field-phone" type="tel" placeholder="+44 7700 900000" autocomplete="tel" />
+                    <label for="np-field-phone">Telefonnummer <span class="np-req">*</span></label>
+                    <input id="np-field-phone" type="tel" placeholder="+49 170 1234567" autocomplete="tel" />
                     <span class="np-err" id="np-err-phone"></span>
                 </div>
                 <div class="np-field">
-                    <label for="np-field-email">Email <span class="np-opt">(optional)</span></label>
-                    <input id="np-field-email" type="email" placeholder="john@example.com" autocomplete="email" />
+                    <label for="np-field-email">E-Mail <span class="np-opt">(optional)</span></label>
+                    <input id="np-field-email" type="email" placeholder="max@beispiel.de" autocomplete="email" />
                     <span class="np-err" id="np-err-email"></span>
                 </div>
-                <button type="submit" id="np-contact-submit">Start Chat</button>
+                <button type="submit" id="np-contact-submit">Chat starten</button>
             </form>
         </div>
 
@@ -53,7 +53,7 @@
             <div id="np-chat-messages" aria-live="polite"></div>
 
             <form id="np-chat-form" autocomplete="off">
-                <input id="np-chat-input" type="text" placeholder="Type your question…" autocomplete="off" />
+                <input id="np-chat-input" type="text" placeholder="Ihre Frage eingeben…" autocomplete="off" />
                 <button type="submit" aria-label="Send">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M3.478 2.405a.75.75 0 0 0-.926.94l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.405Z"/>
@@ -266,7 +266,7 @@
 
 <script>
 (function () {
-    const WELCOME     = 'Hello! I\'m the NP Dental assistant. How can I help you today?';
+    const WELCOME     = 'Hallo! Ich bin der NP Dental Assistent. Wie kann ich Ihnen heute helfen?';
     const API_URL     = '{{ url("/api/chat") }}';
     const TOKEN_KEY   = 'np_chat_token';
     const DONE_KEY    = 'np_chat_contact_done';
@@ -330,7 +330,7 @@
         a.href        = WA_URL;
         a.target      = '_blank';
         a.rel         = 'noopener';
-        a.innerHTML   = WA_SVG + ' Contact us on WhatsApp';
+        a.innerHTML   = WA_SVG + ' Auf WhatsApp kontaktieren';
         msgBox.appendChild(a);
         msgBox.scrollTop = msgBox.scrollHeight;
     }
@@ -397,18 +397,18 @@
 
         if (!nameEl.value.trim()) {
             nameEl.classList.add('np-invalid');
-            errName.textContent = 'Please enter your name.';
+            errName.textContent = 'Bitte geben Sie Ihren Namen ein.';
             valid = false;
         }
         if (!phoneEl.value.trim()) {
             phoneEl.classList.add('np-invalid');
-            errPhone.textContent = 'Please enter your phone number.';
+            errPhone.textContent = 'Bitte geben Sie Ihre Telefonnummer ein.';
             valid = false;
         }
         const emailVal = emailEl.value.trim();
         if (emailVal && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
             emailEl.classList.add('np-invalid');
-            errEmail.textContent = 'Please enter a valid email address.';
+            errEmail.textContent = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
             valid = false;
         }
         if (!valid) return;
@@ -456,7 +456,7 @@
             const data = await res.json();
             typing.remove();
 
-            const reply = data.message || 'Sorry, something went wrong.';
+            const reply = data.message || 'Entschuldigung, etwas ist schiefgelaufen.';
             appendMsg('assistant', reply);
             messages.push({ role: 'assistant', content: reply });
             saveMessages();
@@ -466,7 +466,7 @@
             }
         } catch (err) {
             typing.remove();
-            appendMsg('assistant', 'Sorry, I\'m having trouble connecting. Please try again shortly.');
+            appendMsg('assistant', 'Entschuldigung, ich habe Verbindungsprobleme. Bitte versuchen Sie es in Kürze erneut.');
         }
     });
 
